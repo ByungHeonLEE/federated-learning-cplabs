@@ -1,4 +1,4 @@
-async function simpleAdd(int a, int b) {
+async function simpleAdd(a, b) {
     return a + b;
 }
 
