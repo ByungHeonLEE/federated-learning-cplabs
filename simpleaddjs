@@ -3,4 +3,4 @@ async function simpleAdd(int a, int b) {
 }
 
 // Expose the function to be executed by the server
-mainFunction = simpleMessage;
+mainFunction = simpleAdd;
