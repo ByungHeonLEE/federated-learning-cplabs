@@ -1,0 +1,6 @@
+async function simpleAdd(int a, int b) {
+    return a + b;
+}
+
+// Expose the function to be executed by the server
+mainFunction = simpleAdd;
