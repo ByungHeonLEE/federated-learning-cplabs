@@ -1,5 +1,5 @@
 async function userOpMessage(params) {
-  const userOp = {
+  let userOp = {
     sender: params.sender,
     nonce: params.nonce,
     initCode: (params.init_code) || '0x',
@@ -12,6 +12,10 @@ async function userOpMessage(params) {
     paymasterAndData: (params.paymaster_and_data),
     signature: (params.signature)
   };
+  
+  if (userOp.signature.length % 2 !== 0) {
+    userOp.signature = '0x0' + userOp.signature.slice(2);
+  }
   return userOp;
 }
 
