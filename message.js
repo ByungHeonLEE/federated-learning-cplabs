@@ -16,4 +16,4 @@ async function userOpMessage(params) {
 }
 
 // Expose the function to be executed by server
-const mainFunction = userOpMessage;
+mainFunction = userOpMessage;
