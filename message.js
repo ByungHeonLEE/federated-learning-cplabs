@@ -12,10 +12,6 @@ async function userOpMessage(params) {
     paymasterAndData: (params.paymaster_and_data),
     signature: (params.signature)
   };
-  
-  if (userOp.signature.length % 2 !== 0) {
-    userOp.signature = '0x0' + userOp.signature.slice(2);
-  }
   return userOp;
 }
 
